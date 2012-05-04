@@ -1,0 +1,1 @@
+%w{4kzmf 3y92d 4njo7}.each {|n| puts n.to_i(36).to_s(2).tr('10', '# ')}
