@@ -1,0 +1,1 @@
+'WWuSQSwqu'.unpack('b23'*3).each{|n|puts n.tr'10','# '}
