@@ -1,2 +1,7 @@
-i='ejqrs7hw9f6skddrj9z0p5zw8ehxd7ffrozm80btcl8'.to_i 36
-3.times{37.times{putc' |-_'[i&3];i/=4};puts}
+%w|wuby3lk5w 8qlndm7g2r 99d4giitef|.map{|x|t=4**25;b,s=0,t
+25.times{
+s/=4
+b+=s*i=(x.to_i(36)-b)/s
+t=b+s
+putc' _-|'[i]}
+puts} #euruko-golf
