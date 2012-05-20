@@ -79,31 +79,34 @@ shortest = [99]
 
 '_ |-'.chars.to_a.permutation.map{|x|x.join}.each do |perm|
   (0..9).each do |bottom|
-    (23..39).each do |power|
-      top = 4**power
-      
-      params = zipped_lines(msg, perm, top, bottom)
-      stringified = params.inspect
-      
-      begin
-        a, b, c = eval(stringified)
-        result = unzip(a, b, c, perm, top, bottom)
+    (3..9).each do |base|
+      (23..39).each do |power|
+        top = base**power
         
-        if result == msg
-          score = stringified.length
+        params = zipped_lines(msg, perm, top, bottom)
+        stringified = params.inspect
+        
+        begin
+          a, b, c = eval(stringified)
+          result = unzip(a, b, c, perm, top, bottom)
           
-          result_tuple = [score, stringified, perm, power, bottom]
-          results << result_tuple
-          
-          if score <= shortest[0]
-            shortest = result_tuple
-            puts shortest.inspect
+          if result == msg
+            base36 = params.map{|p| p.to_s 36}
+            score = base36.inspect.length
+            
+            result_tuple = [score, base36, perm, base, power, bottom]
+            results << result_tuple
+            
+            if score <= shortest[0]
+              shortest = result_tuple
+              puts shortest.inspect
+            end
           end
-        end
-  
-      rescue NoMethodError, FloatDomainError, ZeroDivisionError
-      end
       
+        rescue NoMethodError, FloatDomainError, ZeroDivisionError
+        end
+        
+      end
     end
   end
 end

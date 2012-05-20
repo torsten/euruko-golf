@@ -20,11 +20,15 @@ msg="\
 def unzip(a, b, c, perm, top, bottom)
   [a,b,c].map{|f|
     t,b,out=top,bottom,''
+    s=t-b
     25.times{
-      s=t-b
-      i=(f-b)*4/s
-      b+=s/4*i.to_i
-      t=b+s/4
+      # s=t-b
+      # i=(f-b)*4/s
+      # b+=s/4*i.to_i
+      # t=b+s/4
+      s/=4
+      b+=s*i=((f-b)/s).to_i
+      t=b+s
       out += perm[i].chr
     }
     out + "\n"
@@ -99,12 +103,12 @@ end
 
 
 results = []
-shortest = [52]
+shortest = [99]
 
 permutations = '_ |-'.chars.to_a.permutation.map{|x|x.join}
 
 ((0.0)..(9.9)).step(0.1) do |bottom|
-  ((bottom.floor+1)..30).each do |top|
+  ((bottom.floor+1)..99).each do |top|
     permutations.each do |perm|
       # puts "top: #{top}, bottom: #{bottom}"
     

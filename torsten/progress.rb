@@ -2,6 +2,49 @@
 #
 # Originally written by Torsten Becker <torsten.becker@gmail.com> in 2012.
 
+#  ___ _ _ ___ _ _| |_ ___ 
+# | -_| | |  _| | | -_| - |
+# |___|___|_| |___|_|_|___|
+#      136 t0rsten.rb
+%w|wuby3lk5w 8qlndm7g2r 99d4giitef|.map{|x|t=4**25;b,s=0,t
+25.times{
+s/=4
+b+=s*i=(x.to_i(36)-b)/s
+t=b+s
+putc' _-|'[i]}
+puts}#euruko-golf
+
+#  ___ _ _ ___ _ _| |_ ___ 
+# | -_| | |  _| | | -_| - |
+# |___|___|_| |___|_|_|___|
+#      140 t0rsten.rb
+[46.3062943374,9.8328457602403,22.9763929819728].map{|f|t,b=93.0,0;s=t
+25.times{
+s/=4
+b+=s*i=((f-b)/s).to_i
+t=b+s
+putc'| -_euruko'[i]}
+puts}
+
+#  ___ _ _ ___ _ _| |_ ___ 
+# | -_| | |  _| | | -_| - |
+# |___|___|_| |___|_|_|___|
+#      140 t0rsten.rb
+%w|wuby3lk5w 8qlndm7g2r 99d4giitef|.map{|x|t=4**25
+b=0
+25.times{s=t-b
+i=(x.to_i(36)-b)*4/s
+b+=s/4*i
+t=b+s/4
+putc' _-|'[i]}
+puts}#euruko-golf
+
+#  _____ __ __ ____ __ __ |  |__ _____ 
+# |  -__|  |  |   _|  |  ||    -|  _  |
+# |_____|_____|__| |_____||__|__|_____|
+#      113 t0rsten.rb
+i='ejqrs7hw9f6skddrj9z0p5zw8ehxd7ffrozm80btcl8'.to_i 36
+3.times{37.times{putc' |-_'[i&3];i/=4};puts} #euruko-golf
 
 # .-----.--.--.----.--.--.|  |--.-----.
 # |  -__|  |  |   _|  |  ||    <|  _  |
