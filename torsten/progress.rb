@@ -12,7 +12,7 @@ s/=4
 b+=s*i=(x.to_i(36)-b)/s
 t=b+s
 putc' _-|'[i]}
-puts}#euruko-golf
+puts} #euruko-golf
 
 #  ___ _ _ ___ _ _| |_ ___ 
 # | -_| | |  _| | | -_| - |
